@@ -1,0 +1,11 @@
+funcion,zona,prioridad,original,clon,notas
+Crear un cuestionario con preguntas y respuestas,editor,imprescindible,si,si,
+Unirse a la partida con un PIN,entrada jugador,imprescindible,si,si,
+Unirse escaneando un QR,entrada jugador,imprescindible,si,parcial,falta la pantalla de QR
+Mostrar la pregunta en la pantalla principal,juego en vivo,imprescindible,si,si,
+Responder desde el movil en tiempo real,juego en vivo,imprescindible,si,no,
+Ranking en vivo entre pregunta y pregunta,juego en vivo,importante,si,no,
+Podio final con los tres primeros,resultados,importante,si,parcial,
+Biblioteca de cuestionarios guardados,editor,opcional,si,no,
+Modo por equipos,juego en vivo,opcional,si,saltar,fuera del MVP del video
+Informe descargable de resultados,resultados,opcional,no,si,nuestro: lo que no tiene el original
