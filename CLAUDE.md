@@ -10,6 +10,11 @@
 - El nombre de host `srvXXXXXXX.hstgr.cloud` se saca con `hostname -f` una vez dentro.
 - La clave de esta sesión en la nube se pierde. Hay que generar una nueva en el ordenador del usuario y que la pegue en hPanel › VPS › Clave SSH.
 
+## Publicar desde la consola de hPanel (sin SSH)
+Con el repo en público, pegar como root en hPanel › VPS › Terminal del navegador:
+`apt-get update -qq && apt-get install -y -qq git && (git -C /root/yusse-src pull -q 2>/dev/null || git clone -q --depth 1 https://github.com/josejosephro/yusse /root/yusse-src) && bash /root/yusse-src/app/deploy/publicar.sh`
+`publicar.sh` revisa lo que ya hay, instala la app, configura nginx (raíz o /yusse/), pone el candado y prepara la IA. Registro: /root/yusse-publicar.log.
+
 ## Publicar (desde el ordenador del usuario)
 1. Comprobar qué hay ya en la VPS sin tocar nada: `hostname -f; ss -ltnp; ls /etc/nginx/sites-enabled; grep -rl connection_upgrade /etc/nginx`. Elegir un puerto libre (3070 por defecto).
 2. Subir el código: `scp -r app root@IP:/tmp/yusse-src` (sin `node_modules` ni `data`).
